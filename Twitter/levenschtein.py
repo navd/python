@@ -1,0 +1,61 @@
+__author__ = 'user'
+
+import nltk.metrics
+from nltk.metrics import edit_distance
+
+#  transposition flag allows transpositions edits (e.g., “ab” -> “ba”),
+tweet1=('Congrats!!! 8,400 HAP units were to offer this year in Dublin, it seems, 45 have. #Budget2016')
+tweet2=('An idea to transform criminal justice: caring. Hope all courts can learn from this brilliant judge http://www.theguardian.com/us-news/2015/jun/23/procedural-justice-transform-us-criminal-courts … #readbyrichard')
+tweet3=('We see our clear human influence, & that means we can change” A continent-sized reason for hope on global warming: http://www.slate.com/blogs/future_tense/2015/10/14/antarctica_ice_shelf_collapse_is_a_climate_opportunity.html')
+tweet4=('What might happen when millennials understand just how badly their parents & grandparents jeopardized their future?” http://onforb.es/1jzb0lO')
+tweet5=('Google, Apple and Facebook are the companies LinkedIn’s 129 million North American members care about the most: http://onforb.es/1RHTRC9')
+
+spamTweet1=('Congrats!!! 8,400 #HAP units offering $1000000 this year in Dublin Housing  http://housingoffer.ly/offer')
+spamTweet2=('Congo!!! 8,400 #HAP house offering this year in dublin Housing http://housingoffer.ly/offer')
+spamTweet3=('@CheapHouse 8,400 #HAP houses offered this year in Dublin Housing http://housingoffer.ly/offer')
+spamTweet4=('Hurry!!! get 8,400 #HAP units offering $1000000 this year in Dublin Housing http://housingcheap.ly/offer')
+spamTweet5=('Offer!! 8,400 cheap #HAP units offered this year in dublin Housing http://housingcheap.ly/offer')
+spamTweet6=('#LuxuryHome!!! 8,400 #HAP units offering $1000000 this year in dublin http://housingluxury.ly/offer')
+spamTweet7=('Bingo!!! 1200 #HAP units to sellthis year in Dublin Housing  http://housingoffer.ly/offer')
+spamTweet8=('Congo!!! #HAP houses biggest offer this year in dublin Housing http://housingoffer.ly/offer')
+spamTweet9=('@CheapHouse #HAP houses offered $1000000 this year in Dublin Housing http://housingoffer.ly/offer')
+spamTweet10=('LuckyDraw!!! #HAP units offering $1000000 this year in lucky draw Dublin Housing http://housingcheap.ly/offer')
+spamTweet11=('Offer!! 8,400 big budgeted #HAP units offered this year in dublin Housing #Budget2016')
+spamTweet12=('#LuxuryHome!!! 3,200 luxury #HAP homes offered this year in dublin #Budget2016')
+spamTweet13=('Congrats!!! 8,400 #HAP units offering $1000000 this year in Galway Housing  #Budget2016 #GalwayHousing')
+spamTweet14=('Congo!!! 8,400 #HAP house offering space this year in Galway Housing #Budget2016 #GalwayHousing')
+spamTweet15=('@CheapHouse 1,100 #HAP houses offered this year in Limerick #Budget2016 #HomeInLimerick')
+spamTweet16=('Hurry!!! get your #HAP unit offered this year in LimerickHousing #Budget2016 #http://housingcheap.ly/offer')
+spamTweet17=('Offer!! 1,900 cheap #HAP units offered this year in Cork #Budget2016 #CorkHousing')
+spamTweet18=('#LuxuryHome!!! 8,400 #HAP units offering $1000000 this year in Cork #Budget2016 http://housingluxury.ly/offer')
+spamTweet19=('Congrats!!! 8,400 #HAP units offering $1000000 this year in Dublin Housing #Budget2016 #HousingInDublin')
+spamTweet20=('Congo!!! 8,400 #HAP house offering this year in dublin Housing #HousingInDublin http://housingoffer.ly/offer')
+
+
+
+print (nltk.metrics.edit_distance(tweet1, spamTweet1, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet2, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet3, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet4, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet5, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet6, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet7, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet8, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet9, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet10, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet11, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet12, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet13, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet14, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet15, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet16, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet17, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet18, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet19, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, spamTweet20, transpositions=False))
+
+print("\n")
+print (nltk.metrics.edit_distance(tweet1, tweet2, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, tweet3, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, tweet4, transpositions=False))
+print (nltk.metrics.edit_distance(tweet1, tweet5, transpositions=False))
