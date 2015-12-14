@@ -2,7 +2,7 @@
 """
 Created on Tue Oct  6 21:38:29 2015
 
-@author: dipak
+@author: Navdeep
 """
 #Imported the needed packages, stopwords is for Question 1a)
 import nltk.tokenize
